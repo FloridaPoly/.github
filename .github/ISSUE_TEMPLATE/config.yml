@@ -1,12 +1,14 @@
-# Florida Poly org-wide issue intake.
+# Florida Poly issue intake.
 #
-# This file is inherited by every FloridaPoly repository that has no
-# .github/ISSUE_TEMPLATE folder of its own. Editing it here changes intake
-# everywhere at once, which is the point.
+# The canonical copy of this file lives in FloridaPoly/.github, where it is
+# inherited by every repository that has no .github/ISSUE_TEMPLATE folder of its
+# own. A repository that needs its own intake form carries the whole set locally
+# instead, because GitHub inheritance is all or nothing per folder. Either way,
+# edit it upstream and re-sync rather than in place.
 #
-# Blank issues stay enabled in phase 1. Several repos deliberately allow
-# free-form issues today, and inheriting a hard "false" would take that away
-# from engineers org-wide without asking. Revisit once the forms have settled.
+# Blank issues stay enabled for now. Several repos deliberately allow free-form
+# issues today, and a hard "false" would take that away from engineers without
+# asking. Revisit once the forms have settled.
 blank_issues_enabled: true
 contact_links:
   - name: Report a security vulnerability (private)
