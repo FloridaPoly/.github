@@ -6,14 +6,17 @@
 # instead, because GitHub inheritance is all or nothing per folder. Either way,
 # edit it upstream and re-sync rather than in place.
 #
+# No security contact link here on purpose. GitHub adds "Report a security
+# vulnerability" to this chooser automatically whenever a SECURITY.md is present,
+# inherited ones included, and that entry renders the policy in the context of the
+# repository being reported against. A second hand-written link would be the same
+# fact in two places.
+#
 # Blank issues stay enabled for now. Several repos deliberately allow free-form
 # issues today, and a hard "false" would take that away from engineers without
 # asking. Revisit once the forms have settled.
 blank_issues_enabled: true
 contact_links:
-  - name: Report a security vulnerability (private)
-    url: https://github.com/FloridaPoly/.github/blob/main/SECURITY.md
-    about: Never file a vulnerability as a public issue. This explains the private route.
   - name: How to write and classify an issue
     url: https://github.com/FloridaPoly/.github/blob/main/ISSUE_STANDARD.md
     about: Types, labels, titles, required sections, and the triage contract.
