@@ -1,0 +1,112 @@
+name: Bug
+description: Behavior differs from documented or intended behavior.
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        **Before you post:** remove credentials, tokens, Experience JWTs, tenant IDs,
+        private hostnames, Banner IDs, and any real student or employee data. If this is
+        a security vulnerability, close this form and use private reporting instead.
+
+  - type: textarea
+    id: defect
+    attributes:
+      label: Defect
+      description: What is wrong, in one or two sentences. State the wrong behavior, not the fix.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: The shortest path to the wrong behavior. Numbered steps, synthetic data only.
+      placeholder: |
+        1. Sign in as ...
+        2. Open ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      description: What should happen, and what happens instead.
+      placeholder: |
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure scenario and impact
+      description: >-
+        Who is affected, how often, and what they cannot do. This is what sets priority,
+        so be concrete. Note if data is wrong rather than merely missing.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Production
+        - Test
+        - Dev
+        - Local
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit / correlation ID
+      description: Release tag, commit SHA, or the correlationId from the logs.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Best guess is fine. Triage converts this to the area label.
+      options:
+        - api
+        - ui
+        - data
+        - infra
+        - security
+        - integrations
+        - agent
+        - docs
+        - tests
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (redacted)
+      description: Logs, screenshots, request/response bodies. Redact before pasting.
+
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix and affected code
+      description: Optional. File and line references if you have them.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Required checks
+      options:
+        - label: I removed credentials, tokens, private hostnames, and real student or employee data.
+          required: true
+        - label: This is not a security vulnerability (those go to private reporting).
+          required: true
+        - label: I searched open and closed issues for a duplicate.
+          required: true

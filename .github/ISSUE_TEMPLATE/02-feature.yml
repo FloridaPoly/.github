@@ -1,0 +1,119 @@
+name: Feature
+description: A new user-visible capability, or a change to how an existing one behaves.
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Before you post: use public placeholders for tenant IDs, URLs, and people.
+        No credentials, no real student or employee data.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: >-
+        What can someone not do today, and what does that cost them. Describe the
+        situation, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: >-
+        Who gets what, and what decision or task it supports. One paragraph.
+        "An advisor can ..." beats "add a button that ...".
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: The surfaces, endpoints, and behaviors this changes. Bullet list.
+    validations:
+      required: true
+
+  - type: textarea
+    id: nonscope
+    attributes:
+      label: Out of scope
+      description: >-
+        What this deliberately does not do. Required - an unbounded feature cannot be
+        reviewed, estimated, or closed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: >-
+        Observable, checkable statements. Someone other than the author must be able to
+        verify each one. Include the empty, loading, error, and no-permission states.
+      placeholder: |
+        - Given ..., when ..., then ...
+        - Keyboard activation reaches every control, with visible focus.
+        - Lint, the full test suite, and the production build pass.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Triage converts this to the area label.
+      options:
+        - api
+        - ui
+        - data
+        - infra
+        - security
+        - integrations
+        - agent
+        - docs
+        - tests
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: data
+    attributes:
+      label: Data, roles, and actions
+      description: >-
+        What is read, what is written, who may see it, and what approvals apply.
+        Name the source systems (Banner/Ethos, Canvas, Workday, Azure, third party).
+    validations:
+      required: true
+
+  - type: dropdown
+    id: classification
+    attributes:
+      label: Highest data classification touched
+      options:
+        - Public
+        - Internal
+        - Confidential
+        - Student record (FERPA)
+        - PII
+    validations:
+      required: true
+
+  - type: textarea
+    id: tests
+    attributes:
+      label: Required tests
+      description: The tests that must exist before this closes.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Required checks
+      options:
+        - label: I removed credentials, tenant identifiers, private URLs, and real personal data.
+          required: true
+        - label: I searched for an existing issue, and for prior work in another FloridaPoly repo.
+          required: true

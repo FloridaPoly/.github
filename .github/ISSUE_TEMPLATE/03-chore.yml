@@ -1,0 +1,73 @@
+name: Chore
+description: Maintenance, tech debt, refactor, dependencies, CI, deploys, docs, or ops. No new user-visible capability.
+type: Chore
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Use this for work that changes how the system is built, run, or documented
+        rather than what it does for a user. If a user would notice a new capability,
+        file a Feature. If something is broken, file a Bug.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is fragile, slow, duplicated, undocumented, or out of date, and what it puts at risk.
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: Required change
+      description: The concrete change to make.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and out of scope
+      description: Bound it. Cleanup issues grow without a stated boundary.
+      placeholder: |
+        In scope:
+        - ...
+        Out of scope:
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: >-
+        How a reviewer confirms this is done. For a refactor, state the behavior that
+        must not change and the test that proves it.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - api
+        - ui
+        - data
+        - infra
+        - security
+        - integrations
+        - agent
+        - docs
+        - tests
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk if we do nothing
+      description: Optional, but this is what gets a chore prioritized against feature work.

@@ -1,0 +1,17 @@
+# Florida Poly org-wide issue intake.
+#
+# This file is inherited by every FloridaPoly repository that has no
+# .github/ISSUE_TEMPLATE folder of its own. Editing it here changes intake
+# everywhere at once, which is the point.
+#
+# Blank issues stay enabled in phase 1. Several repos deliberately allow
+# free-form issues today, and inheriting a hard "false" would take that away
+# from engineers org-wide without asking. Revisit once the forms have settled.
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability (private)
+    url: https://github.com/FloridaPoly/.github/blob/main/SECURITY.md
+    about: Never file a vulnerability as a public issue. This explains the private route.
+  - name: How to write and classify an issue
+    url: https://github.com/FloridaPoly/.github/blob/main/ISSUE_STANDARD.md
+    about: Types, labels, titles, required sections, and the triage contract.

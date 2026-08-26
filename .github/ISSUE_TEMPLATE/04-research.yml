@@ -1,0 +1,77 @@
+name: Research
+description: An investigation or spike whose output is a decision or a document, not shipped code.
+type: Research
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Research closes when the question is answered and written down. If the answer
+        implies work, that work is a separate Feature, Bug, or Chore issue.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: The single question to be answered, stated so that an answer is recognizable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters now
+      description: What is blocked or at risk until this is answered.
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options or hypotheses under consideration
+      description: What you already believe the candidate answers are.
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: >-
+        Exactly what this issue produces: a decision recorded in a named file, a
+        benchmark table, a written recommendation. Name the file or the destination.
+      placeholder: A decision recorded in docs/decisions/NNNN-slug.md
+    validations:
+      required: true
+
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox
+      description: How much effort this is worth before reporting back either way.
+      placeholder: 2 days
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - api
+        - ui
+        - data
+        - infra
+        - security
+        - integrations
+        - agent
+        - docs
+        - tests
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: decider
+    attributes:
+      label: Who decides
+      description: The person or office that owns the decision this feeds. Name a role, not just "us".
+    validations:
+      required: true

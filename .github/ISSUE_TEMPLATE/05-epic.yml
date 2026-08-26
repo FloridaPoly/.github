@@ -1,0 +1,72 @@
+name: Epic
+description: An umbrella for work delivered by child issues. An epic ships nothing by itself.
+type: Epic
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Open an epic only when the work needs more than one issue and someone will
+        report on it as a unit. Link children as sub-issues (the native GitHub
+        relationship), not as a hand-written list. Do not write code against an epic.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: The outcome the whole epic delivers, in one paragraph.
+    validations:
+      required: true
+
+  - type: textarea
+    id: nongoals
+    attributes:
+      label: Non-goals
+      description: What this epic explicitly will not deliver.
+    validations:
+      required: true
+
+  - type: textarea
+    id: donewhen
+    attributes:
+      label: Done when
+      description: >-
+        The conditions under which this epic closes. "All children closed" is not
+        sufficient: state the observable end state.
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: Planned children
+      description: >-
+        The issues you expect to open. Convert each to a real sub-issue as it is created,
+        and keep this list only as the original plan of record.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary area
+      options:
+        - api
+        - ui
+        - data
+        - infra
+        - security
+        - integrations
+        - agent
+        - docs
+        - tests
+        - Multiple
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and blocking decisions
+      description: >-
+        Other teams, offices, contracts, or sign-offs. Name the office and what you
+        need from it. This is what a blocked label points at.
