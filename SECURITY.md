@@ -12,8 +12,9 @@ Use GitHub private vulnerability reporting on the affected repository:
 
 Only people with access to that repository can see the report. If the Security
 tab does not offer private reporting, or you are not sure which repository is
-affected, email the Florida Poly ITS security contact instead and say that the
-report concerns a GitHub repository.
+affected, email the Florida Poly IT Help Desk at
+[helpdesk@floridapoly.edu](mailto:helpdesk@floridapoly.edu) instead and say that
+the report concerns a GitHub repository.
 
 ## What to include
 
